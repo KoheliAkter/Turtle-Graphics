@@ -3,7 +3,7 @@ from turtle import *
 import turtle
 import random
 
-# Function to generate rainbow color
+# Function to generate color
 def generate_color():
     colors = ['OrangeRed', 'Red', 'Yellow', 'Purple', 'Blue', 'Maroon', 'Fuchsia']
     return random.choice(colors)
@@ -12,7 +12,7 @@ def generate_color():
 screen = turtle.Screen()
 screen.title("Turtle Racing Game")
 screen.setup(width=800, height=600)
-screen.bgcolor("skyblue")  # Set background color
+screen.bgcolor("ForestGreen")
 
 # Create racetrack border
 border = turtle.Turtle()
@@ -47,9 +47,9 @@ for name in turtle_names:
     racer.penup()
     racer.goto(-350, -250 + turtle_names.index(name) * 100)
     color = generate_color()
-    racer.color(color, color)  # Shell color same as name
-    racer.speed(random.randint(1, 10))  # Random speed
-    racer.write(name, align="center", font=("Courier", 12, "normal"))  # Write turtle name
+    racer.color(color, color)
+    racer.speed(random.randint(1, 10))
+    racer.write(name, align="center", font=("Courier", 12, "normal"))
     racers.append(racer)
 
 # Race loop
@@ -73,12 +73,5 @@ text.goto(0, 0)
 text.write(f"The winner is the {winner} turtle!", align="center", font=("Courier", 24, "normal"))
 
 screen.mainloop()
-
-
-
-
-
-
-
 
 done()
